@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+:root {
+    --primary: #1b4332;
+    --accent: #52b788;
+    --white: #ffffff;
+    --dark: #2d2d2d;
+}
+
+/* Header */
+header {
+    background: var(--white);
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+.logo span { color: var(--accent); }
+
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-left: 2rem; }
+.nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; }
+
+.btn-contato {
+    background: var(--primary);
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+/* Hero Section com Fundo Imagem */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=1470&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+
+/* Cards */
+.info-section { padding: 80px 5%; background: #f9f9f9; text-align: center; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+.card { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.card i { font-size: 3rem; color: var(--accent); margin-bottom: 20px; }
+
+/* Tech Section com Fundo Imagem */
+.tech-section {
+    padding: 150px 5%;
+    background: linear-gradient(rgba(27, 67, 50, 0.8), rgba(27, 67, 50, 0.8)), 
+                url('https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1374&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.tech-content { max-width: 700px; margin: 0 auto; }
+
+/* Botões */
+.cta-button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta-button:hover { background: #40916c; transform: scale(1.05); }
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background: white;
+    width: 90%; max-width: 400px;
+    margin: 100px auto;
+    padding: 40px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.close-button { position: absolute; right: 20px; top: 10px; font-size: 30px; cursor: pointer; }
+
+form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer { background: var(--primary); color: white; padding: 30px; text-align: center; }
